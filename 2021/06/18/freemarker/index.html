@@ -185,7 +185,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      856 字
+      935 字
     </span>
   
 
@@ -195,7 +195,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      11
+      12
        分钟
     </span>
   
@@ -279,6 +279,21 @@
 <li>指令</li>
 <li>表达式</li>
 <li>差值<br><a target="_blank" rel="noopener" href="http://freemarker.foofun.cn/dgui_template.html">详细命令见官方文档</a></li>
+</ul>
+<h4 id="常见的遍历方式"><a href="#常见的遍历方式" class="headerlink" title="常见的遍历方式"></a>常见的遍历方式</h4><ul>
+<li>遍历map结构<blockquote>
+<p>map的键尽量是字符串或者数字类型：<br>&lt;#if map?exists&gt;</p>
+<pre><code>&lt;#list map?keys as key&gt; 
+       $&#123;key&#125;---$&#123;map[key]&#125;
+&lt;/#list&gt;
+</code></pre>
+<p>&lt;/#if&gt;</p>
+</blockquote>
+</li>
+<li>遍历list结构<blockquote>
+<p>&lt;#list userList as user&gt;<br> 用户名：${user.userName}<br> 密  码：${user.userPassword}<br> 年  龄: ${user.age}<br>&lt;/#list&gt;</p>
+</blockquote>
+</li>
 </ul>
 
             </div>
