@@ -132,3 +132,20 @@ spring.freemarker.suffix=.html
  - 表达式
  - 差值
   [详细命令见官方文档](http://freemarker.foofun.cn/dgui_template.html)
+  
+  
+  #### 常见的遍历方式
+  
+ - 遍历map结构
+  >map的键尽量是字符串或者数字类型：
+  ><#if map?exists>
+       <#list map?keys as key> 
+              ${key}---${map[key]}
+       </#list>
+</#if>
+ - 遍历list结构
+  ><#list userList as user>
+	用户名：${user.userName}
+	密  码：${user.userPassword}
+	年  龄: ${user.age}
+</#list>
