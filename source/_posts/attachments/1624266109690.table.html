@@ -1,0 +1,62 @@
+<table class='table table-celled table-component' border='1' style='border-collapse: collapse; width: 97.6923%;' id='tinymcetable' > <thead>
+<tr>
+<th style="width: 68.7179%;">创建时可添加的参数</th>
+<th style="width: 28.9744%;">意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 68.7179%;">
+<pre><strong>public JWTCreator.Builder withHeader(Map&lt;String, Object&gt; headerClaims) {</strong><br /><strong>    this.headerClaims = new HashMap(headerClaims);</strong><br /><strong>    return this;</strong><br /><strong>}</strong></pre>
+</td>
+<td style="width: 28.9744%;">添加头信息，参数是一个hashmap</td>
+</tr>
+<tr>
+<td style="width: 68.7179%;">
+<pre><strong>public JWTCreator.Builder withKeyId(String keyId) {</strong><br /><strong>    this.headerClaims.put("kid", keyId);</strong><br /><strong>    return this;</strong><br /><strong>}</strong></pre>
+</td>
+<td style="width: 28.9744%;">添加keyID</td>
+</tr>
+<tr>
+<td style="width: 68.7179%;">
+<pre><strong>public JWTCreator.Builder withIssuer(String issuer) {</strong><br /><strong>    this.addClaim("iss", issuer);</strong><br /><strong>    return this;</strong><br /><strong>}</strong></pre>
+</td>
+<td style="width: 28.9744%;">在负荷中添加iss</td>
+</tr>
+<tr>
+<td style="width: 68.7179%;">
+<pre><strong>public JWTCreator.Builder withSubject(String subject) {</strong><br /><strong>    this.addClaim("sub", subject);</strong><br /><strong>    return this;</strong><br /><strong>}</strong></pre>
+</td>
+<td style="width: 28.9744%;">在负荷中添加subject</td>
+</tr>
+<tr>
+<td style="width: 68.7179%;">
+<pre><strong>public JWTCreator.Builder withAudience(String... audience) {</strong><br /><strong>    this.addClaim("aud", audience);</strong><br /><strong>    return this;</strong><br /><strong>}</strong></pre>
+<strong><br /></strong></td>
+<td style="width: 28.9744%;">在负荷中添加audience</td>
+</tr>
+<tr>
+<td style="width: 68.7179%;">
+<pre><strong>public JWTCreator.Builder withExpiresAt(Date expiresAt) {</strong><br /><strong>    this.addClaim("exp", expiresAt);</strong><br /><strong>    return this;</strong><br /><strong>}</strong></pre>
+<strong><br /></strong></td>
+<td style="width: 28.9744%;">在负载中添加过期时间</td>
+</tr>
+<tr>
+<td style="width: 68.7179%;">
+<pre><strong>public JWTCreator.Builder withNotBefore(Date notBefore) {</strong><br /><strong>    this.addClaim("nbf", notBefore);</strong><br /><strong>    return this;</strong><br /><strong>}</strong></pre>
+</td>
+<td style="width: 28.9744%;">&nbsp;在负载中添加notBefore</td>
+</tr>
+<tr>
+<td style="width: 68.7179%;">
+<pre><strong>public JWTCreator.Builder withIssuedAt(Date issuedAt) {</strong><br /><strong>    this.addClaim("iat", issuedAt);</strong><br /><strong>    return this;</strong><br /><strong>}</strong></pre>
+</td>
+<td style="width: 28.9744%;">在负载中添加issuedAt</td>
+</tr>
+<tr>
+<td style="width: 68.7179%;">
+<pre><strong>public JWTCreator.Builder withJWTId(String jwtId) {</strong><br /><strong>    this.addClaim("jti", jwtId);</strong><br /><strong>    return this;</strong><br /><strong>}</strong></pre>
+<strong><br /></strong></td>
+<td style="width: 28.9744%;">在负载中添加jwtId</td>
+</tr>
+</tbody> </table>
