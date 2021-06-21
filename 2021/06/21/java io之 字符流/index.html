@@ -173,8 +173,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-06-19 19:58" pubdate>
-        2021年6月19日 晚上
+      <time datetime="2021-06-21 17:38" pubdate>
+        2021年6月21日 下午
       </time>
     </span>
   
@@ -236,7 +236,7 @@
 <blockquote>
 <p>在 GBK 编码表中，一个中文字符占用两个字节，UTF-8 中占用了 3 个字节，如果我们采用字节读写的方式读写中文字符就会出现中文编程乱码的情况， 我们都知道 Java 这么风靡很大部分还是因为他的跨平台性，但如果连语言都没有搞定那还怎么牛逼起来，所以 java 为了避免这种情况引进了字符的读写操作。</p>
 </blockquote>
-<h2 id="字符输出流操作"><a href="#字符输出流操作" class="headerlink" title="字符输出流操作"></a>字符输出流操作</h2><blockquote>
+<h2 id="字符流操作"><a href="#字符流操作" class="headerlink" title="字符流操作"></a>字符流操作</h2><blockquote>
 <p>Writer 是一个用于写入字符流的 「抽象类」。子类必须实现的方法仅有 write(char[], int, int)、flush() 和 close()。它是所有字符输出流的父类</p>
 </blockquote>
 <h3 id="wirter常用方法"><a href="#wirter常用方法" class="headerlink" title="wirter常用方法"></a>wirter常用方法</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//写入一个字符</span><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">(<span class="hljs-keyword">int</span> c)</span></span><br><span class="hljs-function"></span><br><span class="hljs-function"><span class="hljs-comment">//写入一个字符数组</span></span><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">(<span class="hljs-keyword">char</span>[] cbuf)</span></span><br><span class="hljs-function"></span><br><span class="hljs-function"><span class="hljs-comment">//写入字符串</span></span><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">(String str)</span></span><br><span class="hljs-function"></span><br><span class="hljs-function"><span class="hljs-comment">//写入字符数组的一部分,从off索引开始,写入len个字符</span></span><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">(<span class="hljs-keyword">char</span>[] cbuf, <span class="hljs-keyword">int</span> off, <span class="hljs-keyword">int</span> len)</span></span><br></code></pre></td></tr></table></figure>
@@ -306,18 +306,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/06/19/java%20io/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">java io 之字节流</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/06/19/freemarker/">
-                        <span class="hidden-mobile">模板引擎</span>
+                      <a href="/2021/06/21/%E5%B8%B8%E8%A7%81%E7%9A%84%E9%97%AE%E9%A2%98/">
+                        <span class="hidden-mobile">常见的问题</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
