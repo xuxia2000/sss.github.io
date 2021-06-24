@@ -1,0 +1,575 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+  <title>shiro - Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Fluid</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="shiro">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-06-22 13:19" pubdate>
+        2021年6月22日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.5k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      34
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">shiro</h1>
+            
+            <div class="markdown-body">
+              <p>这是关于springboot中Shiro的学习博客<br><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/4260d620878d">Shiro框架简介与基本使用</a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/guitu18/p/11258089.html">Shiro权限管理框架（一）：Shiro的基本使用</a></p>
+<p><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000037754274">Shiro安全框架</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/bbxylqf126com/article/details/110501155">Shiro的基本使用(重要)</a></p>
+<h2 id="在javase中"><a href="#在javase中" class="headerlink" title="在javase中"></a>在javase中</h2><p>1.自定义一个realm,继承AuthorizingRealm</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs scala"><span class="hljs-meta">@Slf</span>4j<br>public <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CustomerRealm</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">AuthorizingRealm</span> </span>&#123;<br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-keyword">protected</span> <span class="hljs-type">AuthorizationInfo</span> doGetAuthorizationInfo(<span class="hljs-type">PrincipalCollection</span> principalCollection) &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;<br>    &#125;<br><br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-keyword">protected</span> <span class="hljs-type">AuthenticationInfo</span> doGetAuthenticationInfo(<span class="hljs-type">AuthenticationToken</span> <span class="hljs-type">Token</span>) <span class="hljs-keyword">throws</span> <span class="hljs-type">AuthenticationException</span> &#123;<br>        <span class="hljs-comment">//获取用户名</span><br>        <span class="hljs-type">String</span> principal = (<span class="hljs-type">String</span>) <span class="hljs-type">Token</span>.getPrincipal();<br>        log.info(principal);<br>        <span class="hljs-type">String</span> credentials = (<span class="hljs-type">String</span>) <span class="hljs-type">Token</span>.getCredentials();<br>        log.info(credentials);<br>        <span class="hljs-comment">//验证用户名</span><br>        <span class="hljs-keyword">if</span> (<span class="hljs-string">&quot;jack&quot;</span>.equals(principal))&#123;<br>		<span class="hljs-comment">//封装验证信息</span><br>            <span class="hljs-type">SimpleAuthenticationInfo</span> simpleAuthenticationInfo = <span class="hljs-keyword">new</span> <span class="hljs-type">SimpleAuthenticationInfo</span>(principal, <span class="hljs-string">&quot;123456&quot;</span>, <span class="hljs-keyword">this</span>.getName());<br>            <span class="hljs-keyword">return</span> simpleAuthenticationInfo;<br>        &#125;<br><br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+
+<p><strong>principal</strong> </p>
+<blockquote>
+<p>身份信息，是主体（subject）进行身份认证的标识，标识必须具有唯一性，如用户名、手机号、邮箱地址等，一个主体可以有多个身份，但是必须有一个主身份（Primary Principal）</p>
+</blockquote>
+<p><strong>credentials</strong> </p>
+<blockquote>
+<p>凭证信息，是只有主体自己知道的安全信息，如密码、证书等</p>
+</blockquote>
+<p><strong>simpleAuthenticationInfo</strong> </p>
+<blockquote>
+<p>SimpleAuthenticationInfo authenticationInfo = new SimpleAuthenticationInfo(<br>userInfo, //用户名–此处传的是用户对象<br>userInfo.getPassword(), //密码—从数据库中获取的密码<br>salt,<br>getName() //当前的realm名<br>);<br>Simple中可以传四个参数也可以传三个参数。</p>
+<p>第一个参数，有的人传的是userInfo对象对用的用户名。在学习过程中，传入的都是user对象，没有尝试过对象对应的用户名，但是从前辈们的经验看得到，此处也可以传用户名，因人而异吧。</p>
+<p>第二个参数，传的是从数据库中获取的password，然后再与token中的password进行对比，匹配上了就通过，匹配不上就报异常。</p>
+<p>第三个参数，盐–用于加密密码对比，–获取的经验：为了防止两用户的初始密码是一样的，<br>–巨佬们的解答：四个参数，防止两用户可能初始密码相同时候用，token 用simplehash（四个参数的构造） 加密默认用了MD5 迭代一次加密，info中在密码比对调用new SimpleHash(String algorithmName, Object source）这个实例化对象默认迭代一次了，所以当你用三个参数加密时候可能两 个初始密码相同人的就没能区别开 （因此realm中密码要从数据库的查的原因），通过设置reaml 中credentialsMatcher 属性的各项属性可实现</p>
+<p>第四个参数：当前realm的名字。</p>
+</blockquote>
+<h2 id="main函数中使用"><a href="#main函数中使用" class="headerlink" title="main函数中使用"></a>main函数中使用</h2><figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs reasonml">@Slf4j<br>public <span class="hljs-keyword">class</span> Test &#123;<br>    public static void main(String<span class="hljs-literal">[]</span> args) &#123;<br>        <span class="hljs-comment">// 获取安全管理类</span><br>        DefaultWebSecurityManager defaultWebSecurityManager = <span class="hljs-keyword">new</span> <span class="hljs-constructor">DefaultWebSecurityManager()</span>;<br><br>        <span class="hljs-comment">//设置自定义realm</span><br>        defaultWebSecurityManager.set<span class="hljs-constructor">Realm(<span class="hljs-params">new</span> CustomerRealm()</span>);<br>        <span class="hljs-comment">//设置安全管理类</span><br>        <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">SecurityUtils</span>.</span></span>set<span class="hljs-constructor">SecurityManager(<span class="hljs-params">defaultWebSecurityManager</span>)</span>;<br>        <span class="hljs-comment">//通过安全管理类获得subject</span><br>        Subject subject = <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">SecurityUtils</span>.</span></span>get<span class="hljs-constructor">Subject()</span>;<br>        <span class="hljs-comment">//生产token</span><br>        UsernamePasswordToken token = <span class="hljs-keyword">new</span> <span class="hljs-constructor">UsernamePasswordToken(<span class="hljs-string">&quot;jack&quot;</span>, <span class="hljs-string">&quot;123456&quot;</span>)</span>;<br><br><br><br>        <span class="hljs-keyword">try</span> &#123;<br>            <span class="hljs-comment">// 登录认证</span><br>            subject.login(token);<br>            <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">System</span>.</span></span>out.println(subject.is<span class="hljs-constructor">Authenticated()</span>);<br>        &#125; catch (UnknownAccountException e) &#123;<br>            <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">System</span>.</span></span>out.println(<span class="hljs-string">&quot;用户名错误&quot;</span>);<br>        &#125; catch (IncorrectCredentialsException e) &#123;<br>            <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">System</span>.</span></span>out.println(<span class="hljs-string">&quot;密码错误&quot;</span>);<br>        &#125;<br><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><strong>DefaultWebSecurityManager</strong> </p>
+<p>接口securityManager继承了其它的三个接口Authenticator(认证接口)，Authorizer(授权接口)，SessionManager(会话接口)，现在对这四个接口进行分析:</p>
+<p>1.securityManager定义的方法：</p>
+<p>1.1.登录</p>
+<p>Subject login(Subject subject, AuthenticationToken authenticationToken) throws AuthenticationException;</p>
+<p>1.2.登出</p>
+<p>void logout(Subject subject);</p>
+<p>1.3.创建subject</p>
+<p>Subject createSubject(SubjectContext context);</p>
+<p>2.Authenticator定义的方法</p>
+<p>2.1.认证方法</p>
+<p>public AuthenticationInfo authenticate(AuthenticationToken authenticationToken)<br>            throws AuthenticationException;</p>
+<p>3.Authorizer定义的方法</p>
+<p>3.1.是否拥有权限(返回boolean型)</p>
+<p>boolean isPermitted(PrincipalCollection principals, String permission);</p>
+<p>boolean isPermitted(PrincipalCollection subjectPrincipal, Permission permission);</p>
+<p>boolean[] isPermitted(PrincipalCollection subjectPrincipal, String… permissions);</p>
+<p>boolean[] isPermitted(PrincipalCollection subjectPrincipal, List<Permission> permissions);</p>
+<p>boolean isPermittedAll(PrincipalCollection subjectPrincipal, String… permissions);</p>
+<p> boolean isPermittedAll(PrincipalCollection subjectPrincipal, Collection<Permission> permissions);</p>
+<p>3.2检测是否拥有权限(如果没有权限，会抛出异常)</p>
+<p>void checkPermission(PrincipalCollection subjectPrincipal, String permission) throws AuthorizationException;</p>
+<p>void checkPermission(PrincipalCollection subjectPrincipal, Permission permission) throws AuthorizationException;</p>
+<p>void checkPermissions(PrincipalCollection subjectPrincipal, String… permissions) throws AuthorizationException;</p>
+<p>void checkPermissions(PrincipalCollection subjectPrincipal, Collection<Permission> permissions) throws AuthorizationException;</p>
+<p>3.3.是否拥有角色</p>
+<p>boolean hasRole(PrincipalCollection subjectPrincipal, String roleIdentifier);</p>
+<p>boolean[] hasRoles(PrincipalCollection subjectPrincipal, List<String> roleIdentifiers);</p>
+<p>boolean hasAllRoles(PrincipalCollection subjectPrincipal, Collection<String> roleIdentifiers);</p>
+<p>3.4.检测是否拥有角色(如果没有角色，会抛出异常)</p>
+<p>void checkRole(PrincipalCollection subjectPrincipal, String roleIdentifier) throws AuthorizationException;</p>
+<p>void checkRoles(PrincipalCollection subjectPrincipal, Collection<String> roleIdentifiers) throws AuthorizationException;</p>
+<p>void checkRoles(PrincipalCollection subjectPrincipal, String… roleIdentifiers) throws AuthorizationException;</p>
+<p>4.SessionManager定义的方法</p>
+<p>4.1.创建session</p>
+<p>Session start(SessionContext context);</p>
+<p>4.2.根据session的key获取session</p>
+<p>Session getSession(SessionKey key) throws SessionException;</p>
+<p><strong>SecurityUtils</strong></p>
+<p>其中声明了一个静态属性，三个静态方法。</p>
+<p><strong>静态属性 securityManager</strong></p>
+<blockquote>
+<p>private static SecurityManager securityManager;</p>
+</blockquote>
+<p>有两个静态方法是为此静态属性服务的，也就是下面这两个：</p>
+<blockquote>
+<p>public static void setSecurityManager(SecurityManager securityManager) {<br>    SecurityUtils.securityManager = securityManager;<br>}</p>
+</blockquote>
+<blockquote>
+<p>public static SecurityManager getSecurityManager() throws UnavailableSecurityManagerException {<br>    SecurityManager securityManager = ThreadContext.getSecurityManager();<br>    if (securityManager == null) {<br>        securityManager = SecurityUtils.securityManager;<br>    }<br>    if (securityManager == null) {<br>        String msg = “No SecurityManager accessible to the calling code, either bound to the “ +<br>                ThreadContext.class.getName() + “ or as a vm static singleton.  This is an invalid application “ +<br>                “configuration.”;<br>        throw new UnavailableSecurityManagerException(msg);<br>    }<br>    return securityManager;<br>}</p>
+</blockquote>
+<p><strong>getSubject 静态方法</strong></p>
+<p>这个是 Shiro 中最核心的方法了，用来获取 Subject.</p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/muxi0407/p/11987661.html">Shiro 中的 SecurityUtil详解</a></p>
+<p><strong>UsernamePasswordToken</strong></p>
+<blockquote>
+<p>UsernamePasswordToken是一个简单的包含username及password即用户名及密码的登录验证用token，这个类同时继承了HostAuthenticationToken及RememberMeAuthenticationToken，因此UsernamePasswordToken能够存储客户端的主机地址以及确定token是否能够被后续的方法使用。值得注意的是在这里password是以char数组的形式存储的，这样设计是因为String本身是不可变的，这可能会导致无效的密码被访问到。另外，开发者应在验证之后调用clear方法清除token从而杜绝该token在后续被访问的可能性。</p>
+</blockquote>
+<p>UserNamePasswordToken类的主要属性如下及用户名，密码，是否记住token以及验证来源的host主机地址：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * The username</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">private</span> <span class="hljs-keyword">String</span> username;<br> <br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * The password, in char[] format</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">private</span> char[] password;<br> <br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Whether or not &#x27;rememberMe&#x27; should be enabled for the corresponding login attempt;</span><br><span class="hljs-comment"> * default is &lt;code&gt;false&lt;/code&gt;</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">private</span> <span class="hljs-keyword">boolean</span> rememberMe = <span class="hljs-literal">false</span>;<br> <br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * The location from where the login attempt occurs, or &lt;code&gt;null&lt;/code&gt; if not known or explicitly</span><br><span class="hljs-comment"> * omitted.</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">private</span> <span class="hljs-keyword">String</span> host;<br></code></pre></td></tr></table></figure>
+
+<p><strong>获取token的用户名</strong></p>
+<figure class="highlight leaf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs leaf">/**<br> * Simply returns &#123;@link <span class="hljs-function"><span class="hljs-keyword">#</span><span class="hljs-title">getUsername</span><span class="hljs-params">()</span></span> getUsername()&#125;.<br> *<br> * @return the &#123;@link <span class="hljs-function"><span class="hljs-keyword">#</span><span class="hljs-title">getUsername</span><span class="hljs-params">()</span></span> username&#125;.<br> * @see org.apache.shiro.authc.AuthenticationToken<span class="hljs-function"><span class="hljs-keyword">#</span><span class="hljs-title">getPrincipal</span><span class="hljs-params">()</span></span><br> */<br>public Object getPrincipal() &#123;<br>    return getUsername();<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs typescript"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Returns the username submitted during an authentication attempt.</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@return </span>the username submitted during an authentication attempt.</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-built_in">String</span> <span class="hljs-function"><span class="hljs-title">getUsername</span>(<span class="hljs-params"></span>)</span> &#123;<br>    <span class="hljs-keyword">return</span> username;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>一般来说，我们会通过调用getPrincipal()方法来获取token中的用户名并以此来进行登录验证而本方法的实质就是通过调用本地getUserName()方法直接获取存储在token中的username。</p>
+<p><strong>获取token的密码</strong></p>
+<figure class="highlight leaf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs leaf">/**<br> * Returns the &#123;@link <span class="hljs-function"><span class="hljs-keyword">#</span><span class="hljs-title">getPassword</span><span class="hljs-params">()</span></span> password&#125; char array.<br> *<br> * @return the &#123;@link <span class="hljs-function"><span class="hljs-keyword">#</span><span class="hljs-title">getPassword</span><span class="hljs-params">()</span></span> password&#125; char array.<br> * @see org.apache.shiro.authc.AuthenticationToken<span class="hljs-function"><span class="hljs-keyword">#</span><span class="hljs-title">getCredentials</span><span class="hljs-params">()</span></span><br> */<br>public Object getCredentials() &#123;<br>    return getPassword();<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Returns the password submitted during an authentication attempt as a character array.</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> * @return the password submitted during an authentication attempt as a character array.</span><br><span class="hljs-comment"> */</span><br><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-built_in">char</span>[] <span class="hljs-title">getPassword</span>(<span class="hljs-params"></span>)</span> &#123;<br>    <span class="hljs-keyword">return</span> password;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>一般来说我们通过getCredentials()方法来获取token中的密码，该方法与获取用户名的方式一致，调用本地getPassword()方法获取存储在token中的密码。</p>
+<p><strong>Clear方法</strong></p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Clears out (nulls) the username, password, rememberMe, and inetAddress.  The password bytes are explicitly set to</span><br><span class="hljs-comment"> * &lt;tt&gt;0x00&lt;/tt&gt; before nulling to eliminate the possibility of memory access at a later time.</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> void clear() &#123;<br>    <span class="hljs-keyword">this</span>.username = <span class="hljs-literal">null</span>;<br>    <span class="hljs-keyword">this</span>.host = <span class="hljs-literal">null</span>;<br>    <span class="hljs-keyword">this</span>.rememberMe = <span class="hljs-literal">false</span>;<br> <br>    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.password != <span class="hljs-literal">null</span>) &#123;<br>        <span class="hljs-keyword">for</span> (int i = <span class="hljs-number">0</span>; i &lt; password.length; i++) &#123;<br>            <span class="hljs-keyword">this</span>.password[i] = <span class="hljs-number">0x00</span>;<br>        &#125;<br>        <span class="hljs-keyword">this</span>.password = <span class="hljs-literal">null</span>;<br>    &#125;<br> <br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>为了防止验证完成后的后续访问，我们应在验证完成后调用clear方法清除token中数据，这里需要注意的是UsernamePasswordToken类在clear()方法中对password做了处理而不是单纯地将password的引用置null，这里首先将password引用对应的char数组的值全部置0然后再将引用断开。这里我的理解是虽然JVM会调用GC将不可达的根节点的对象回收，但是GC本身是不定时的即不是实时清除垃圾对象，因此在这里为了防止password在被GC清除前仍能被访问到，这里将char数组里的值全部置0从而根本上杜绝非法访问。</p>
+<p>toString()方法</p>
+<figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs processing"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Returns the String representation.  It does not include the password in the resulting</span><br><span class="hljs-comment"> * string for security reasons to prevent accidentally printing out a password</span><br><span class="hljs-comment"> * that might be widely viewable).</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> * @return the String representation of the &lt;tt&gt;UsernamePasswordToken&lt;/tt&gt;, omitting</span><br><span class="hljs-comment"> *         the password.</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">String</span> toString() &#123;<br>    StringBuilder sb = <span class="hljs-keyword">new</span> StringBuilder();<br>    sb.<span class="hljs-built_in">append</span>(getClass().getName());<br>    sb.<span class="hljs-built_in">append</span>(<span class="hljs-string">&quot; - &quot;</span>);<br>    sb.<span class="hljs-built_in">append</span>(username);<br>    sb.<span class="hljs-built_in">append</span>(<span class="hljs-string">&quot;, rememberMe=&quot;</span>).<span class="hljs-built_in">append</span>(rememberMe);<br>    <span class="hljs-keyword">if</span> (host != <span class="hljs-keyword">null</span>) &#123;<br>        sb.<span class="hljs-built_in">append</span>(<span class="hljs-string">&quot; (&quot;</span>).<span class="hljs-built_in">append</span>(host).<span class="hljs-built_in">append</span>(<span class="hljs-string">&quot;)&quot;</span>);<br>    &#125;<br>    <span class="hljs-keyword">return</span> sb.toString();<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+<p>这里没什么好说的，创建一个StringBuilder对象将用户名等信息拼接起来并返回。注意为了安全起见这里不会将密码拼接进返回的String中。</p>
+<p><strong>Subject</strong> </p>
+<p>通常我们会将Subject对象理解为一个用户，同样的它也有可能是一个三方程序，它是一个抽象的概念，可以理解为任何与系统交互的“东西”都是Subject。</p>
+<p><strong>得到一个对象</strong></p>
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs reasonml">Subject subject = <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">SecurityUtils</span>.</span></span>get<span class="hljs-constructor">Subject()</span>;  <span class="hljs-comment">//得到一个对象</span><br><br>Session session = subject.get<span class="hljs-constructor">Session()</span>;  <span class="hljs-comment">//得到session </span><br>session.set<span class="hljs-constructor">Attribute( <span class="hljs-string">&quot;someKey&quot;</span>, <span class="hljs-string">&quot;aValue&quot;</span> )</span>; <br></code></pre></td></tr></table></figure>
+
+<p>三.这里的httpSession的全包名是javax.servlet.http.HttpSession，也就是说它可以正常操作httpSession</p>
+<p>之前说了Subject可以理解为当前用户，那么我怎么知道你是当前用户呢，当然是需要登录。</p>
+<p>//创建一个用户<br>UsernamePasswordToken token = new UsernamePasswordToken(“root”,”123”);<br>//是否记住用户<br>token.setRememberMe(true);<br>//登录<br>subject.login(token);</p>
+<p> //登录<br>        try {<br>            subject.login(token);<br>            //没有抛异常则登录成功<br>        } catch ( UnknownAccountException uae ) {<br>            System.out.println(“用户名不存在”);<br>        } catch ( IncorrectCredentialsException ice ) {<br>            System.out.println(“密码错误”);<br>        } catch ( LockedAccountException lae ) {<br>            System.out.println(“用户被锁定，不能登录”);<br>        } catch ( AuthenticationException ae ) {<br>            System.out.println(“严重的错误”);<br>        }</p>
+<p>//判断用户是否是拥有某种角色<br>            boolean isRole = subject.hasRole( “admin” );<br>            //是否拥有某种功能<br>            boolean isPer = subject.isPermitted(“xiaoming:run”);</p>
+<p>//退出登录<br>            subject.logout();</p>
+<p><a target="_blank" rel="noopener" href="https://shiro.apache.org/subject.html">理解 Apache Shiro 中的subject</a></p>
+<p><strong>认证时可能发生的异常</strong></p>
+<blockquote>
+<p>认证的几种状态</p>
+<p>UnknownAccountException：用户名错误</p>
+<p>IncorrectCredentialsException：密码错误</p>
+<p>DisabledAccountException：账号被禁用</p>
+<p>LockedAccountException：账号被锁定</p>
+<p>ExcessiveAttemptsException：登录失败次数过多</p>
+<p>ExpiredCredentialsException：凭证过期</p>
+</blockquote>
+<p>用户的认证是在SimpleAccountRealm的doGetAuthenticationInfo的方法中完成的，而SimpleAccountRealm继承自AuthorizingRealm，而AuthorizingRealm中有一个抽象方法</p>
+<blockquote>
+<p>protected abstract AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection var1);<br>SimpleAccountRealm就是复写了AuthorizingRealm中的这个抽象方法实现的用户认证，所以后面我们需要自定义认证的时候我们就可以自定义一个realm继承自AuthorizingRealm来复写doGetAuthorizationInfo，在这个方法里面实现我们自己的认证逻辑</p>
+</blockquote>
+<p>不仅认证，有意思的是AuthorizingRealm是继承自AuthenticatingRealm，而AuthenticatingRealm中有个抽象方法</p>
+<blockquote>
+<p>protected abstract AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken var1) throws AuthenticationException;</p>
+</blockquote>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/springboot/">springboot</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/springboot/">springboot</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/06/22/%E6%97%A5%E5%BF%97%E6%89%93%E5%8D%B0/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">日志打印</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/06/21/redis/">
+                        <span class="hidden-mobile">redis</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
